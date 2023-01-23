@@ -1,0 +1,30 @@
+/Q23=> . Body mass index(BMI) is calculated as follows:
+ bmi = weight in Kg / (height x height) in m2. Write a function which calculates bmi.
+  BMI is used to broadly define different weight groupsin adults 20 years old or older.
+  Check if a person is underweight, , overweight or obese based the information given below.
+    - The same groups apply to both men and women.
+    - Underweight: BMI is less than 18.5
+    - Normal weight: BMI is 18.5 to 24.9
+    - Overweight: BMI is 25 to 29.9
+    - Obese: BMI is 30 or more*/
+
+function checkBmi(weight , height){
+    const bmi = (Math.round((weight / height ** 2) * 10)) / 10;
+    console.log(`your bmi is ${bmi}`)
+
+    if( bmi < 18.5){
+        console.log("You are underweight");
+    }else if (bmi>=18.5 && bmi <=24.9){
+        console.log("you weight is normal , keep it up, well done");
+    }else if ( bmi > 24.9 && bmi <=29.9){
+        console.log("You are under weight , need to do running");
+
+    }else {
+        console.log("you are obese, join gym immediatly , as soon as possilble");
+    }
+}
+
+// please enter weight in kg and height in meters
+const wght= 50;
+const hght = 1.5;
+checkBmi(wght , hght);
